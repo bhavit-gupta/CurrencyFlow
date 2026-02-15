@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CurrencyFlow | Premium Converter</title>
+
+  <link rel="stylesheet" href="output.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-slate-900 text-white font-inter overflow-x-hidden">
+
+  <!-- Header -->
+  <header class="flex items-center justify-between px-6 py-5 bg-black/20 border-b border-white/5">
+    <div class="flex items-center gap-2 font-extrabold text-xl">
+      <div class="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-pink-600">
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+      Currency<span class="text-indigo-500">Flow</span>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <div class="flex flex-col items-center px-4 md:px-8 py-8">
+
+    <!-- Title -->
+    <section class="text-center mb-8">
+      <h1 class="text-4xl md:text-7xl font-black">
+        <span class="bg-gradient-to-r from-indigo-500 via-pink-600 to-purple-600 bg-clip-text text-transparent">
+          Exchange World
+        </span>
+      </h1>
+      <p class="text-white/60 mt-2">Seamlessly convert currencies with real-time market data.</p>
+    </section>
+
+    <!-- Converter -->
+    <section
+      class="w-full max-w-5xl flex flex-col md:flex-row bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl shadow-2xl overflow-hidden">
+
+      <!-- FROM -->
+      <div class="w-full md:w-[45%] p-6 md:p-8">
+        <span class="text-xs font-bold tracking-widest">FROM</span>
+
+        <div class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10 mt-3">
+          <img id="from-flag" class="w-9 h-9 rounded-full" />
+          <select name="from" class="Currency bg-transparent flex-1 outline-none appearance-none"></select>
+          <i class="fa-solid fa-chevron-down text-xs opacity-60"></i>
+        </div>
+
+        <p class="currency-name text-xs text-white/50 mt-2"></p>
+
+        <div class="relative mt-6">
+          <span id="currency-symbol" class="absolute left-4 top-1/2 -translate-y-1/2 text-2xl opacity-50"></span>
+          <input id="amount" type="number" value="1" min="0" inputmode="decimal"
+            class="w-full pl-10 pr-4 py-4 text-3xl bg-white/5 border border-white/10 rounded-xl outline-none" />
+        </div>
+      </div>
+
+      <!-- Swap -->
+      <div class="w-full md:w-[10%] flex items-center justify-center py-6 md:py-0">
+        <button id="swap-icon" class="w-14 h-14 rounded-xl border border-white/20 text-indigo-500">
+          <i class="fa-solid fa-arrow-right-arrow-left rotate-90 md:rotate-0"></i>
+        </button>
+      </div>
+
+      <!-- TO -->
+      <div class="w-full md:w-[45%] p-6 md:p-8">
+        <div class="flex justify-between text-xs font-bold tracking-widest">
+          <span>TO</span>
+          <span id="date" class="opacity-50"></span>
+        </div>
+
+        <div class="flex items-center gap-3 bg-white/5 p-3 rounded-xl border border-white/10 mt-3">
+          <img id="to-flag" class="w-9 h-9 rounded-full" />
+          <select name="to" class="Currency bg-transparent flex-1 outline-none appearance-none"></select>
+          <i class="fa-solid fa-chevron-down text-xs opacity-60"></i>
+        </div>
+
+        <p class="currency-name text-xs text-white/50 mt-2"></p>
+
+        <div class="mt-6">
+          <div id="result-display"
+            class="text-6xl font-extrabold bg-gradient-to-r from-indigo-500 to-purple-600 bg-clip-text text-transparent">
+          </div>
+          <div id="rate-display" class="text-sm text-white/50 mt-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reset -->
+    <button id="reset-btn"
+      class="mt-8 px-6 py-4 rounded-xl font-bold bg-gradient-to-r from-indigo-500 to-pink-600 text-black">
+      Reset
+    </button>
+  </div>
+
+  <script src="env.js"></script>
+  <script src="codes.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
