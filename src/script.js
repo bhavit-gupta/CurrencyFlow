@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const resetBtn = document.getElementById("reset-btn");
     const currencySymbol = document.getElementById("currency-symbol");
 
-    const BASE_API_URL = ENV.BASE_API_URL;
+    const BASE_API_URL = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 
     const getCurrencySymbol = (code) => {
         try {
