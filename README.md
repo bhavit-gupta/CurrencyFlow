@@ -4,7 +4,7 @@
 
 ### 🔗 [Live Demo](https://bg-currency-converter.onrender.com)
 
-![CurrencyFlow Preview](https://github.com/bhavit-gupta/currencyConverter/raw/main/src/preview.png) *(Note: Add a preview image if available)*
+![CurrencyFlow Preview](https://bg-currencyflow.onrender.com)
 
 ## ✨ Features
 
